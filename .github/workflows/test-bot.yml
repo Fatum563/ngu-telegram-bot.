@@ -1,5 +1,5 @@
 
-name: Test Telegram Bot
+name:TestBot
 
 on:
   workflow_dispatch:
