@@ -1,4 +1,4 @@
-name: TestBot
+name:TestBot
 on:
   workflow_dispatch:
 jobs:
