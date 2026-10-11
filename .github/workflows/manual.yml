@@ -2,13 +2,16 @@
 name: Manual NGU Analysis
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  analyze:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Download repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -19,5 +22,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run bot check
+      - name: Check Python syntax
         run: python -m py_compile bot.py
+
